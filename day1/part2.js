@@ -7,7 +7,17 @@ const input = String(fs.readFileSync(path.join(__dirname, "input.txt"))).trim().
 
 
 const digits = input.map(e => {
-    const parsedString = (e.replace('one', '1').replace('two', '2').replace('three', '3').replace('four', '4').replace('five', '5').replace('six', '6').replace('seven', '7').replace('eight', '8').replace('nine', '9').replace(/\D/g, ""));
+    const parsedString = (
+        e.replace(/one/g, 'o1e')
+        .replace(/two/g, 't2o')
+        .replace(/three/g, 'th3ee')
+        .replace(/four/g, 'fo4r')
+        .replace(/five/g, 'fi5e')
+        .replace(/six/g, 's6x')
+        .replace(/seven/g, 'sev7n')
+        .replace(/eight/g, 'eig8t')
+        .replace(/nine/g, 'n9ne')
+        .replace(/\D/g, ""));
     return +(parsedString[0] + parsedString.slice(-1));
 });
 
