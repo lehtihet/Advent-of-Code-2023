@@ -13,6 +13,7 @@ for (let i = 0; i < time.length; i++) {
             wonRaces++;
         speed++;
     }
+    
     waysToWin.push(wonRaces);
     wonRaces = 0;
     speed = 0;
